@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador Simples</title>
+    <style>
+        body{
+            background-color: rgb(153, 144, 144);
+            font-size: 15pt;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            margin-top: 10px;
+        }
+        input{
+            width: 100px;
+        }
+        div#rsoma, div#rsub, div#rmult, div#rdivi{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Soma</h1>
+    <input type="number" name="soman1" id="soman1"> +
+    <input type="number" name="soman2" id="soman2"> =
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="rsoma">Resultado:</div>
+
+    <h1>Subtração</h1>
+    <input type="number" name="subn1" id="subn1"> - 
+    <input type="number" name="subn2" id="subn2"> =
+    <input type="button" value="Subtrair" onclick="subtrair()">
+    <div id="rsub">Resultado:</div>
+    
+    <h1>Multiplicação</h1>
+    <input type="number" name="multn1" id="multn1"> X
+    <input type="number" name="multn2" id="multn2"> =
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+    <div id="rmult">Resultado:</div>
+
+    <h1>Divisão</h1>
+    <input type="number" name="divn1" id="divn1"> ÷
+    <input type="number" name="divn2" id="divn2"> =
+    <input type="button" value="Dividir" onclick="dividir()">
+    <div id="rdivi">Resultado:</div>
+
+    <h1>Potência</h1>
+    <input type="number" name="elevn1" id="elevn1"> elevado a
+    <input type="number" name="elevn2" id="elevn2"> é
+    <input type="button" value="Elevar" onclick="elevar()">
+    <div id="relev">Resultado:</div>
+    <script>
+        function somar() {
+            var ns1 = document.getElementById('soman1')
+            var ns2 = document.getElementById('soman2')
+            var rsoma = document.getElementById('rsoma')
+            var s1 = Number(ns1.value)
+            var s2 = Number(ns2.value)
+            var soma = s1 + s2
+            rsoma.innerHTML = `A soma entre ${s1} e ${s2} é <strong>${soma}</strong>`           
+        }
+        function subtrair() {
+            var nsub1 = document.getElementById('subn1')
+            var nsub2 = document.getElementById('subn2')
+            var rsub = document.getElementById('rsub')
+            var sub1 = Number(nsub1.value)
+            var sub2 = Number(nsub2.value)
+            var subt = sub1 - sub2
+            rsub.innerHTML = `A subtração entre ${sub1} e ${sub2} é <strong>${subt}</strong>`
+        }
+        function multiplicar() {
+            var nmult1 = document.getElementById('multn1')
+            var nmult2 = document.getElementById('multn2')
+            var rmult = document.getElementById('rmult')
+            var mult1 = Number(nmult1.value)
+            var mult2 = Number(nmult2.value)
+            var multip = mult1 * mult2
+            rmult.innerHTML = `A multiplicação entre ${mult1} e ${mult2} é <strong>${multip}</strong>`           
+        }
+        function dividir() {
+            var ndiv1 = document.getElementById('divn1') 
+            var ndiv2 = document.getElementById('divn2')
+            var rdivi = document.getElementById('rdivi')
+            var div1 = Number(ndiv1.value)
+            var div2 = Number(ndiv2.value)
+            var divid = div1 / div2
+            rdivi.innerHTML = `A divisão entre ${div1} e ${div2} é <strong>${divid}</strong>`
+        }
+        function elevar() {
+            var nelev1 = document.getElementById('elevn1')
+            var nelev2 = document.getElementById('elevn2')
+            var relev = document.getElementById('relev')
+            var elev1 = Number(nelev1.value)
+            var elev2 = Number(nelev2.value)
+            var eleva = elev1 ** elev2
+            relev.innerHTML = `A potência de ${elev1} elevado a ${elev2} é <strong>${eleva}</strong>`
+        }
+    </script>
+</body>
+</html>

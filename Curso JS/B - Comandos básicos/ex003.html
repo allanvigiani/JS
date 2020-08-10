@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro JS</title> 
+    <style>
+        body{
+            background-color: burlywood;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Verdana', sans-serif;
+        }
+        h1{
+            color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <script>
+        var n1 = parseFloat(prompt('Digite um número'))//string
+        var n2 = parseFloat(prompt('Digite outro número'))//string  
+        //'+' para adição (number + number)
+        //'+' para concatenação (string + string)    
+        var soma = n1 + n2 //Nesse caso é concatenação
+        alert(`A soma entre ${n1} e ${n2} é igual a ${soma}`) //template string
+
+        /*Pode-se usar também o Number(n).
+        var n1 = Number(prompt('Digite um número'))
+        var n2 = Number(prompt('Digite outro número'))
+        var soma = n1 + n2 
+        alert('A soma é ' + soma)
+        */ 
+    </script>
+</body>
+</html>  

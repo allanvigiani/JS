@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            background-color: rgb(70, 69, 69);
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+        strong#calta{
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificador de Nacionalidade.</h1>
+    Digite o nome do seu país: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">Resultado</div>
+    <script>
+        function verificar() {
+            var txtpais = document.querySelector('input#txtpais')
+            var res = document.querySelector('div#res')
+            var pais = (txtpais.value)
+            res.innerHTML = `<p>Seu país de origem é <strong id="calta">${pais}</strong></p>`
+                if (pais == 'Brasil') {
+                    res.innerHTML += 'Você é brasileiro'
+                } else {
+                    res.innerHTML += 'Você é estrangeiro'
+                }
+        }
+    </script>
+</body>
+</html>

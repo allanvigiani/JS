@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: rgb(108, 108, 177);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Início dos estudos do DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendeno <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <div name='texto'>Obtenha ajuda</div> 
+    <div class="escrita">Ajude ao próximo</div>
+    <div id="query">Help your next</div> <br>
+    <script>
+        var p1 = document.getElementsByTagName('p')[0] // 0 = 1° parágrafo 1 = 2° parágrafo e assim por diante
+        document.write(`Está escrito assim: ${p1.innerText}`)//innetText = Somente texto   innerHTML = mudanças como o <strong> (com formatação)
+        p1.style.color = 'blue' 
+        
+        var d = document.getElementById('msg')     
+        d.style.background = 'grey' 
+        //d.innerText = 'Estou aguardando' Opção 1 (Precisa criar uma VAR)
+        document.getElementById('msg').innerText = 'Olá' //Opção 2
+
+        var dname = document.getElementsByName('texto')[0]
+        dname.style.background = 'green'
+
+        var txt = document.getElementsByClassName('escrita')[0]
+        txt.style.background = 'black'
+
+        var seletor = document.querySelector('div#query') /*
+        id = #
+        class = .*/
+        seletor.style.background = 'purple'
+    </script>
+</body>
+</html>
